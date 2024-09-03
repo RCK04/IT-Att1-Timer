@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+.rocket-animation-bg{
+    width: 100%;
+    height: 100dvh;
+    color: var(--white);
+    position: relative;
+}
+
+.logo, .content{
+    position: absolute;
+}
+
+.rocket-animation-bg .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px;
+    z-index: 1;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    top: 0;
+}
+
+.rocket-animation-bg .content{
+    top: 50%;
+}
+
+.rocket-animation-bg .content h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+
