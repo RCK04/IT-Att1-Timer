@@ -1,8 +1,12 @@
-gsap.from(".content", 1.2, {opacity: 0, y: 150, delay: 0.5});
+// Utilizando o ES6 Modules
+import Animations from "./module-animations.js";
 
-let countdownDate = new Date("Sep 30, 2024 00:00:00").getTime();
+// Chamando o animations
+Animations();
 
-const interval = setInterval(function() {
+let countdownDate = new Date("Sep 06, 2024 00:00:00").getTime();
+
+const interval = setInterval(() => {
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
@@ -17,12 +21,38 @@ const interval = setInterval(function() {
     document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');;
 
     if(distance < 0){
-        clearInterval(interval);
+        // clearInterval(interval);
         document.getElementById("days").innerHTML = "00";
         document.getElementById("hours").innerHTML = "00";
         document.getElementById("minutes").innerHTML = "00";
         document.getElementById("seconds").innerHTML = "00";
+
+        removeHour.disabled = true;
         
+    } else{
+        removeHour.disabled = false;
     }
 
 }, 1000);
+
+let addHour = document.querySelector(".add-btn");
+let removeHour = document.querySelector(".remove-btn");
+
+addHour.addEventListener("click", () => {
+    countdownDate += 1000 * 60 * 60;
+    removeHour.disabled = false;
+});
+
+removeHour.addEventListener("click", () => {
+    const time = new Date();
+
+    if(countdownDate - time.getTime() > 0){
+        countdownDate -= 1000 * 60 * 60;
+    } 
+    
+    else{
+        removeHour.disabled = true;
+    }
+    
+    
+})

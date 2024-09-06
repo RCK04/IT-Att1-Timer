@@ -39,6 +39,10 @@
 
 .rocket-animation-bg .content .countdown div{
     flex-basis: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
 }
 
 .rocket-animation-bg .content .countdown div p{
@@ -61,5 +65,27 @@
 
 .rocket-animation-bg .content i{
     font-size: 1.2rem;
+}
+
+.rocket-animation-bg .content .btn-container{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.rocket-animation-bg .content .btn-container > *{
+    justify-content: center;
+    min-width: fit-content;
+    flex: 1;
+}
+
+.rocket-animation-bg .content .btn-container .btn{
+    transition: 0.3s ease-in-out;
+}
+
+.rocket-animation-bg .content .btn-container .btn:hover{
+    color: black;
+    background-color: white;
 }
 
