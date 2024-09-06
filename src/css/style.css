@@ -24,8 +24,9 @@
 }
 
 .rocket-animation-bg .content{
-    top: 50%;
-    padding: 0 0 0 30px;
+    width: 100%;
+    top: 40%;
+    padding: 20px;
 }
 
 .rocket-animation-bg .content h1{
@@ -75,7 +76,6 @@
 }
 
 .rocket-animation-bg .content .btn-container > *{
-    justify-content: center;
     min-width: fit-content;
     flex: 1;
 }
@@ -85,7 +85,7 @@
 }
 
 .rocket-animation-bg .content .btn-container .btn:hover{
-    color: black;
-    background-color: white;
+    color: var(--black);
+    background-color: var(--white);
 }
 

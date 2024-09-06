@@ -1,0 +1,12 @@
+@media (max-width: 430px){
+    .rocket-animation-bg .content .btn-container{
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 388px) {
+    .rocket-animation-bg .content h1{
+        font-size: 3rem;
+    }
+}
