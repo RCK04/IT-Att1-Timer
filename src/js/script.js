@@ -5,7 +5,7 @@ import Countdown from "./countdown.js";
 Animations();
 
 // Ao instanciar a classe criamos um Objeto.
-const countdown = new Countdown("Oct 13, 2024 00:00:00");
+const countdown = new Countdown("Oct 14, 2024 00:00:00");
 countdown.start();
 
 // Uso do let para dar o querySelector nos botões
