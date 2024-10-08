@@ -1,13 +1,13 @@
-// Utilização da classe para a Contagem
+
 export default class Countdown{
     constructor(date){
         this.date = new Date(date).getTime();
     }
 
     start(){
-        // Utilizando Arrow functions
+        
         setInterval(() => {
-            // Utilização das constantes
+ 
             const now = new Date().getTime();
             const distance = this.date - now;
         
@@ -16,7 +16,7 @@ export default class Countdown{
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-            // Uso do Operador Ternário
+    
             document.getElementById("days").innerHTML = distance < 0 ? "00" : String(days).padStart(2, '0');
             document.getElementById("hours").innerHTML = distance < 0 ? "00" : String(hours).padStart(2, '0');
             document.getElementById("minutes").innerHTML = distance < 0 ? "00" : String(minutes).padStart(2, '0');
