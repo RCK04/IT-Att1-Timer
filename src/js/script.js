@@ -1,10 +1,8 @@
 import Animations from "./module-animations.js";
 import Countdown from "./countdown.js";
-
 Animations();
 
-
-const countdown = new Countdown("Oct 28, 2024 00:00:00");
+const countdown = new Countdown("May 24, 2025 00:00:00");
 countdown.start();
 
 
